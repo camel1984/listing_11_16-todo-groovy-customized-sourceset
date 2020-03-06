@@ -1,0 +1,29 @@
+apply plugin: 'groovy'
+
+repositories {
+    maven {
+        url "https://repo1.maven.org/maven2/"
+    }
+
+    maven {
+        url "https://repo.spring.io/plugins-release/"
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.1.5'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['src/groovy']
+        }
+    }
+
+    test {
+        groovy {
+            srcDirs = ['test/groovy']
+        }
+    }
+}
